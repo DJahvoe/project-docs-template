@@ -1,0 +1,110 @@
+<mxfile host="app.diagrams.net" modified="2025-12-17T00:00:00.000Z" agent="Mozilla/5.0" version="24.7.0">
+  <diagram name="Sequence Overview">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Participants -->
+        <mxCell id="user" value="User" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="50" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="web" value="Web App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="50" width="170" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="api" value="API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="50" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="40" width="160" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Lifelines -->
+        <mxCell id="ll_user" value="" style="endArrow=none;startArrow=none;dashed=1;strokeWidth=2;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="100" as="sourcePoint"/>
+            <mxPoint x="160" y="650" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll_web" value="" style="endArrow=none;startArrow=none;dashed=1;strokeWidth=2;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="100" as="sourcePoint"/>
+            <mxPoint x="405" y="650" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll_api" value="" style="endArrow=none;startArrow=none;dashed=1;strokeWidth=2;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="100" as="sourcePoint"/>
+            <mxPoint x="670" y="650" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll_db" value="" style="endArrow=none;startArrow=none;dashed=1;strokeWidth=2;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="110" as="sourcePoint"/>
+            <mxPoint x="920" y="650" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Activations -->
+        <mxCell id="act_web" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="399" y="190" width="12" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_api" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="664" y="260" width="12" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_db" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="914" y="320" width="12" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Messages (solid = request/call, dashed = response/return) -->
+        <mxCell id="m1" value="1) Click Submit" style="endArrow=classic;html=1;rounded=0;orthogonalLoop=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="200" as="sourcePoint"/>
+            <mxPoint x="405" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2" value="2) POST /api/requests" style="endArrow=classic;html=1;rounded=0;orthogonalLoop=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="270" as="sourcePoint"/>
+            <mxPoint x="670" y="270" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3" value="3) INSERT request" style="endArrow=classic;html=1;rounded=0;orthogonalLoop=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="330" as="sourcePoint"/>
+            <mxPoint x="920" y="330" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m4" value="4) OK" style="endArrow=classic;html=1;rounded=0;dashed=1;orthogonalLoop=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="390" as="sourcePoint"/>
+            <mxPoint x="670" y="390" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m5" value="5) 201 Created (+id)" style="endArrow=classic;html=1;rounded=0;dashed=1;orthogonalLoop=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="450" as="sourcePoint"/>
+            <mxPoint x="405" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m6" value="6) Show success" style="endArrow=classic;html=1;rounded=0;dashed=1;orthogonalLoop=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="520" as="sourcePoint"/>
+            <mxPoint x="160" y="520" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Note -->
+        <mxCell id="note" value="High-level flow only&#10;Details in Detailed Design" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="80" y="590" width="300" height="60" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
