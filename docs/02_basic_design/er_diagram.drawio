@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e">
+    <diagram name="ER Detail" id="0">
+        <mxGraphModel dx="1086" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="t_users" value="users&#xa;—&#xa;PK id (uuid)&#xa;email (varchar)&#xa;name (varchar)&#xa;created_at (timestamp)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Menlo;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="170" width="260" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="t_orders" value="orders&#xa;—&#xa;PK id (uuid)&#xa;FK user_id (uuid)&#xa;status (varchar)&#xa;total_amount (decimal)&#xa;created_at (timestamp)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Menlo;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="160" width="280" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" value="users.id = orders.user_id&#xa;(1 : N)" style="endArrow=classic;html=1;" parent="1" source="t_users" target="t_orders" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
